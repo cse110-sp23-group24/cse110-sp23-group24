@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: blue;
     color: #fff;
+    background-color: black;
 }
 
 h1 {
@@ -9,6 +9,18 @@ h1 {
 }
 
 .container {
+    max-width: 100%;
+    max-height: 100%;
+    background: linear-gradient(-45deg, red,orange,blue, green, yellow);
+    background-size: 200% 200%;
+    margin-inline: auto;
+    text-align: center;
+    padding: 97px;
+    position: relative;
+    
+    animation: animate 15s ease infinite;
+}
+.intro-container {
     max-width: 600px;
     margin-inline: auto;
     text-align: center;
@@ -42,6 +54,17 @@ h1 {
     box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
+@keyframes animate {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
 @keyframes shake {
     0%, 100% { transform: translateX(0); }
     10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
@@ -51,4 +74,5 @@ h1 {
 .shaking {
     animation: shake 0.5s;
 }
+
 
